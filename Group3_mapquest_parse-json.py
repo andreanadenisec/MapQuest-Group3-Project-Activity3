@@ -10,8 +10,10 @@ key = "QIH00Aknfy7gGhpFAAxdSgEzAVLK74xF"
 welcomeText = "Welcome To MapQuest"
 
 print("\n")
-print(welcomeText.center(45))
-print("=============================================")
+print(welcomeText.center(100))
+print("===============================================================================================================")
+print("MapQuest provides simple directions and creates suitable route points depending on your preferred route type!")
+print("Please enter the following details, or enter 'quit' or 'q' to terminate the program.")
 
 while True:
     # Get User Input for Starting and Destination
@@ -23,7 +25,7 @@ while True:
     if dest == "quit" or dest == "q":
         break
 
-    #Get User Input for Route Types
+    # Get User Input for Route Types
     print("\nRoute Type")
     print("1 = Fastest")
     print("2 = Shortest")
