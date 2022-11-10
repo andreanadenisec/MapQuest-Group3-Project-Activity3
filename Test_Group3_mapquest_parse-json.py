@@ -51,6 +51,7 @@ def getMapQuest(orig, dest, routeType, avoid, language):
             str(json_status) +
             "\nRefer to: https://developer.mapquest.com/documentation/directions-api/status-code"
         )
+    return (json_status, url)
 
 
 def test_getMapQuest():
