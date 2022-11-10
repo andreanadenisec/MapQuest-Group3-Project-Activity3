@@ -56,12 +56,14 @@ def getMapQuest(orig,dest,routeType,avoid,language):
         print("API Status: " + str(json_status) + " = A successful route call.\n")
         displayInfo(orig,dest,routeType,avoid,json_data,json_status,url)
     elif json_status == 402:
+        print("API Status: " + str(json_status) + " = Invalid user inputs for one or both locations.\n")
         showinfo(  
             title='Error',
             message=f"Status Code: " + str(json_status) + "\nInvalid user inputs for one or both locations."
         ) 
 
     elif json_status == 611:
+        print("API Status: " + str(json_status) + " = Missing an entry for one or both locations\n")
         showinfo(  
             title='Error',
             message=f"Status Code: " + str(json_status) + "\nMissing an entry for one or both locations."
