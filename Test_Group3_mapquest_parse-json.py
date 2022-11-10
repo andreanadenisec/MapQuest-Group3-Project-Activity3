@@ -1,6 +1,3 @@
-from tkinter import *
-from tkinter.messagebox import showinfo
-from tkinter.ttk import Combobox, Treeview
 import json
 import urllib.parse
 import requests
@@ -30,27 +27,9 @@ def getMapQuest(orig, dest, routeType, avoid, language):
     elif json_status == 402:
         print("API Status: " + str(json_status) +
               " = Invalid user inputs for one or both locations.\n")
-        showinfo(
-            title='Error',
-            message=f"Status Code: " +
-            str(json_status) + "\nInvalid user inputs for one or both locations."
-        )
-
     elif json_status == 611:
         print("API Status: " + str(json_status) +
               " = Missing an entry for one or both locations\n")
-        showinfo(
-            title='Error',
-            message=f"Status Code: " +
-            str(json_status) + "\nMissing an entry for one or both locations."
-        )
-    else:
-        showinfo(
-            title='Error',
-            message=f"For Status Code: " +
-            str(json_status) +
-            "\nRefer to: https://developer.mapquest.com/documentation/directions-api/status-code"
-        )
     return (json_status, url)
 
 
